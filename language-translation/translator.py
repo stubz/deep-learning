@@ -236,9 +236,9 @@ DON'T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
 tests.test_seq2seq_model(seq2seq_model)
 
 # Number of Epochs
-epochs = 10
+epochs = 20
 # Batch Size
-batch_size = 128 
+batch_size = 256 
 # RNN Size
 rnn_size = 256
 # Number of Layers
@@ -247,7 +247,7 @@ num_layers = 2
 encoding_embedding_size = 100
 decoding_embedding_size = 100
 # Learning Rate
-learning_rate = 0.0025
+learning_rate = 0.001
 # Dropout Keep Probability
 keep_probability = 0.5
 
