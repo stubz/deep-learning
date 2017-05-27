@@ -169,7 +169,7 @@ def decoding_layer(dec_embed_input, dec_embeddings, encoder_state, vocab_size, s
 
     # Decoder RNNs
     dec_cell = tf.contrib.rnn.MultiRNNCell([tf.contrib.rnn.BasicLSTMCell(rnn_size)] * num_layers)
-    dec_cell = tf.contrib.rnn.DropoutWrapper(dec_cell, output_keep_prob=keep_prob)
+    # dec_cell = tf.contrib.rnn.DropoutWrapper(dec_cell, output_keep_prob=keep_prob)
 
     with tf.variable_scope("decoding") as decoding_scope:
         # Output Layer
@@ -247,9 +247,9 @@ num_layers = 2
 encoding_embedding_size = 100
 decoding_embedding_size = 100
 # Learning Rate
-learning_rate = 0.01
+learning_rate = 0.0025
 # Dropout Keep Probability
-keep_probability = 0.9
+keep_probability = 0.5
 
 
 save_path = 'checkpoints/dev'
