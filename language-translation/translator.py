@@ -238,7 +238,7 @@ tests.test_seq2seq_model(seq2seq_model)
 # Number of Epochs
 epochs = 20
 # Batch Size
-batch_size = 256 
+batch_size = 128
 # RNN Size
 rnn_size = 256
 # Number of Layers
