@@ -169,7 +169,7 @@ def decoding_layer(dec_embed_input, dec_embeddings, encoder_state, vocab_size, s
 
     # Decoder RNNs
     dec_cell = tf.contrib.rnn.MultiRNNCell([tf.contrib.rnn.BasicLSTMCell(rnn_size)] * num_layers)
-    dec_cell = tf.contrib.rnn.DropoutWrapper(dec_cell, output_keep_prob=keep_prob)
+    # dec_cell = tf.contrib.rnn.DropoutWrapper(dec_cell, output_keep_prob=keep_prob)
 
     with tf.variable_scope("decoding") as decoding_scope:
         # Output Layer
@@ -236,9 +236,9 @@ DON'T MODIFY ANYTHING IN THIS CELL THAT IS BELOW THIS LINE
 tests.test_seq2seq_model(seq2seq_model)
 
 # Number of Epochs
-epochs = 10
+epochs = 20
 # Batch Size
-batch_size = 128 
+batch_size = 128
 # RNN Size
 rnn_size = 256
 # Number of Layers
@@ -247,9 +247,9 @@ num_layers = 2
 encoding_embedding_size = 100
 decoding_embedding_size = 100
 # Learning Rate
-learning_rate = 0.01
+learning_rate = 0.001
 # Dropout Keep Probability
-keep_probability = 0.9
+keep_probability = 0.5
 
 
 save_path = 'checkpoints/dev'
